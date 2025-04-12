@@ -18,6 +18,14 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/all-products', function () {
+    return Inertia::render('Admin/AllProducts');
+})->middleware(['auth', 'verified'])->name('all-products');
+
+Route::get('/add-new-product', function () {
+    return Inertia::render('Admin/AddNewProduct');
+})->middleware(['auth', 'verified'])->name('add-new-product');
+
 Route::get('/about', function(){
     return Inertia::render('About');
 })->name('about');
@@ -31,5 +39,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
 
 require __DIR__.'/auth.php';

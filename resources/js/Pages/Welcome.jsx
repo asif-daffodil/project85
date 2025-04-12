@@ -1,3 +1,4 @@
+import Hero from '@/Components/Home/Hero';
 import FidaShopLayout from '@/Layouts/FidaShopLayout';
 import { Head, Link } from '@inertiajs/react';
 
@@ -16,6 +17,7 @@ export default function Welcome({ auth, laravelVersion, phpVersion }) {
     return (
         <FidaShopLayout auth={auth}>
             <Head title="Fida Shop - Home" />
+            <Hero />
         </FidaShopLayout>
     );
 }

@@ -1,3 +1,4 @@
+import Footer from "@/Components/Footer";
 import MainMenubar from "@/Components/MainMenubar";
 
 const FidaShopLayout = ({ header, children, auth }) => {
@@ -12,6 +13,7 @@ const FidaShopLayout = ({ header, children, auth }) => {
                 </header>
             )}
             <main>{children}</main>
+            <Footer />
         </div>
     );
 };
